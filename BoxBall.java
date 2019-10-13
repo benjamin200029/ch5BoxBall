@@ -2,23 +2,26 @@ import java.awt.*;
 import java.awt.geom.*;
 
 /**
- * A ball that bounces incide a box. 
+ * A ball that bounces inside a box. 
  * 
  * @version 10/13/2019
  * @author Ben Adelson
  */
 public class BoxBall
 {   
+    /**
+     * private variables are carried over from bouncing ball     
+     */
+    
     private int ballDegradation = 1;
     private Ellipse2D.Double circle;
-    private Color color;
     private int diameter;
     private int xPosition;
     private int yPosition;
-    private final Rectangle bounds;      
     private Canvas canvas;
     private int xSpeed;
     private int ySpeed;                // initial downward speed
+    private final Rectangle bounds;      
 
     /**
      * Constructor for objects of class BoxBall
@@ -29,18 +32,16 @@ public class BoxBall
      * @param ySpeed  the vertical speed of the ball
      * 
      * @param ballDiameter  the diameter (in pixels) of the ball
-     * @param ballColor  the color of the ball
      * @param bounds the rectangle the ball should bounce withing
      * @param drawingCanvas  the canvas to draw this ball on
      */
-    public BoxBall(int xPos, int yPos, int xSpeed, int ySpeed, int ballDiameter, Color ballColor,
+    public BoxBall(int xPos, int yPos, int xSpeed, int ySpeed, int ballDiameter,
                         Rectangle boundingRectangle, Canvas drawingCanvas)
     {
         xPosition = xPos;
         yPosition = yPos;
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
-        color = ballColor;
         diameter = ballDiameter;
         bounds = boundingRectangle;
         canvas = drawingCanvas;
@@ -51,7 +52,6 @@ public class BoxBall
      **/
     public void draw()
     {
-        canvas.setForegroundColor(color);
         canvas.fillCircle(xPosition, yPosition, diameter);
     }
 

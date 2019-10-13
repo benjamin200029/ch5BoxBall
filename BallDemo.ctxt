@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BallDemo
-comment0.text=\r\n\ Class\ BallDemo\ -\ a\ short\ demonstration\ showing\ animation\ with\ the\ \r\n\ Canvas\ class.\ \r\n\r\n\ @author\ Bill\ Crosbie\r\n\ @version\ 2015-March-BB\r\n\r\n\ @author\ Michael\ K\u00F6lling\ and\ David\ J.\ Barnes\r\n\ @version\ 2011.07.31\r\n\ \r\n\ edited\ by\ Ben\ Adelson\r\n\ version\ 1\r\n\ Date\:\ 10/13/2019\r\n
+comment0.text=\r\n\ Class\ BallDemo\ -\ a\ short\ demonstration\ showing\ animation\ with\ the\ \r\n\ Canvas\ class.\ \r\n\r\n\ @author\ Bill\ Crosbie\r\n\ @version\ 2015-March-BB\r\n\r\n\ @author\ Michael\ K\u00F6lling\ and\ David\ J.\ Barnes\r\n\ @version\ 2011.07.31\r\n\ \r\n\ @author\ Ben\ Adelson\r\n\ @version\ 2019.10.13\r\n
 comment1.params=
 comment1.target=BallDemo()
 comment1.text=\r\n\ Create\ a\ BallDemo\ object.\ Creates\ a\ fresh\ canvas\ and\ makes\ it\ visible.\r\n
@@ -10,4 +10,6 @@ comment2.text=\r\n\ Simulate\ two\ bouncing\ balls\r\n
 comment3.params=numberOfBalls
 comment3.target=void\ boxBounce(int)
 comment3.text=\r\n\ Simulates\ bouncing\ balls\ in\ a\ box\r\n
-numComments=4
+comment4.params=
+comment4.target=void\ drawFrame()
+numComments=5
