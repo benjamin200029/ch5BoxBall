@@ -1,4 +1,7 @@
 import java.awt.Color;
+import java.awt.*;
+import java.awt.geom.*;
+import java.util.Random;
 
 /**
  * Class BallDemo - a short demonstration showing animation with the 
@@ -9,6 +12,10 @@ import java.awt.Color;
  *
  * @author Michael Kölling and David J. Barnes
  * @version 2011.07.31
+ * 
+ * edited by Ben Adelson
+ * version 1
+ * Date: 10/13/2019
  */
 
 public class BallDemo   
@@ -52,5 +59,23 @@ public class BallDemo
                 finished = true;
             }
         }
+    }
+    
+    /**
+     * Simulates bouncing balls in a box
+     */
+    
+    public void boxBounce(int numberOfBalls)
+    {
+        myCanvas.setVisible(true);
+        // draw the box
+        Rectangle box = new Rectangle(50,50,400,400);
+        myCanvas.draw(box);
+        // crate and show the balls
+        Random random = new Random();
+        
+        
+        
+        
     }
 }
