@@ -4,7 +4,7 @@ import java.awt.geom.*;
 /**
  * A ball that bounces inside a box. 
  * 
- * @version 10/13/2019
+ * @version 10/20/2019
  * @author Ben Adelson
  */
 public class BoxBall
@@ -21,7 +21,8 @@ public class BoxBall
     private Canvas canvas;
     private int xSpeed;
     private int ySpeed;                // initial downward speed
-    private final Rectangle bounds;      
+    private final Rectangle bounds;
+    private Color randomColor;
 
     /**
      * Constructor for objects of class BoxBall
@@ -34,9 +35,10 @@ public class BoxBall
      * @param ballDiameter  the diameter (in pixels) of the ball
      * @param bounds the rectangle the ball should bounce withing
      * @param drawingCanvas  the canvas to draw this ball on
+     * @param ballColor the color of the ball
      */
     public BoxBall(int xPos, int yPos, int xSpeed, int ySpeed, int ballDiameter,
-                        Rectangle boundingRectangle, Canvas drawingCanvas)
+                        Rectangle boundingRectangle, Canvas drawingCanvas, Color ballColor)
     {
         xPosition = xPos;
         yPosition = yPos;
@@ -45,6 +47,7 @@ public class BoxBall
         diameter = ballDiameter;
         bounds = boundingRectangle;
         canvas = drawingCanvas;
+        randomColor = ballColor;
     }
 
     /**
@@ -52,6 +55,7 @@ public class BoxBall
      **/
     public void draw()
     {
+        canvas.setForegroundColor(randomColor);
         canvas.fillCircle(xPosition, yPosition, diameter);
     }
 

@@ -82,7 +82,7 @@ public class BallDemo
             int xSpeed = random.nextInt(30);
             int ySpeed = random.nextInt(30);
             Color colorMixed = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256));
-            BoxBall ball = new BoxBall(x, y, xSpeed, ySpeed, 16, box, myCanvas);
+            BoxBall ball = new BoxBall(x, y, xSpeed, ySpeed, 16, box, myCanvas,colorMixed);
             balls.add(ball);
             ball.draw();
         }
@@ -108,11 +108,4 @@ public class BallDemo
             ball.erase();
         }
     } 
-    
-     public void drawFrame() {
-        int borderSize = 20;
-        Dimension size = myCanvas.getSize();
-        Rectangle r = new Rectangle(borderSize, borderSize, (int) size.getWidth() - 2*borderSize, (int) size.getHeight() - 2*borderSize);
-        myCanvas.draw(r);
-    }
 }
